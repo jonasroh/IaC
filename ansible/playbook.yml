@@ -1,16 +1,5 @@
 ---
-- hosts: ec2_instances
-  become: true
-  tasks:
-  - name: Update apt cache
-    apt:
-      update_cache: yes
-  - name: Install Apache
-    apt:
-      name: apache2
-      state: present
-  - name: Start Apache
-    service:
-      name: apache2
-      state: started
-      enabled: yes
+- name: Deploy Apache
+  hosts: all
+  roles: 
+    - apache

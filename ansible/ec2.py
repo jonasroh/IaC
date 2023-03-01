@@ -18,6 +18,6 @@ reservations = conn.get_all_instances(filters={'tag-key': 'Name', 'tag-value': '
 instances = [i for r in reservations for i in r.instances]
 
 # print inventory in Ansible format
-print('[my_group]')
+print('[instancias_ec2]')
 for i in instances:
     print(i.ip_address)

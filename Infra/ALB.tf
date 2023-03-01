@@ -19,7 +19,7 @@ resource "aws_lb_target_group" "alvo" {
   name = "server-apache"
   port = 80
   protocol = "HTTP"
-  target_type = "ip"
+  target_type = "instance"
   vpc_id = module.vpc.vpc_id
 }
 
